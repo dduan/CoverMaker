@@ -20,7 +20,7 @@ struct CoverContent0View: View {
                 .padding(.horizontal, 25)
                 .fixedSize(horizontal: false, vertical: true)
                 .minimumScaleFactor(0.5)
-            HStack {
+            HStack(spacing: 15) {
                 ForEach(cover.tags.filter { NSImage(named: $0) != nil }, id: \.self) { tag in
                     Image(tag)
                         .resizable()
